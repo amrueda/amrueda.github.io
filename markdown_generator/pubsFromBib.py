@@ -30,6 +30,7 @@ publist = {
         "file" : "proceedings.bib",
         "venuekey": "booktitle",
         "venue-pretext": "In the proceedings of ",
+        "category": "conferences",
         "collection" : {"name":"publications",
                         "permalink":"/publication/"}
         
@@ -38,6 +39,7 @@ publist = {
         "file": "pubs.bib",
         "venuekey" : "journal",
         "venue-pretext" : "",
+        "category": "manuscripts",
         "collection" : {"name":"publications",
                         "permalink":"/publication/"}
     } 
@@ -136,6 +138,8 @@ for pubsource in publist:
                     url = True
 
             md += "\ncitation: '" + html_escape(citation) + "'"
+
+            md += "\ncategory: '" + publist[pubsource]["category"] + "'"
 
             md += "\n---"
 
