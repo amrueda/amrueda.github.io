@@ -97,12 +97,18 @@ for pubsource in publist:
             md_filename = (str(pub_date) + "-" + url_slug + ".md").replace("--","-")
             html_filename = (str(pub_date) + "-" + url_slug).replace("--","-")
 
-            #Build Citation from text
+            #Build Citation and Authors from text
+            authors = ""
             citation = ""
+
 
             #citation authors - todo - add highlighting for primary author?
             for author in bibdata.entries[bib_id].persons["author"]:
+                authors = authors+" "+author.first_names[0]+" "+author.last_names[0]+", "
                 citation = citation+" "+author.first_names[0]+" "+author.last_names[0]+", "
+
+            # Remove last comma of authors
+            authors = authors[:-2]
 
             #citation title
             citation = citation + "\"" + html_escape(b["title"].replace("{", "").replace("}","").replace("\\","")) + ".\""
@@ -140,6 +146,8 @@ for pubsource in publist:
             md += "\ncitation: '" + html_escape(citation) + "'"
 
             md += "\ncategory: '" + publist[pubsource]["category"] + "'"
+
+            md += "\nauthors: '" + authors + "'"
 
             md += "\n---"
 
