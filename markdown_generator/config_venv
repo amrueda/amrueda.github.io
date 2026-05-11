@@ -1,0 +1,6 @@
+python3 -m venv virtual_environment
+source virtual_environment/bin/activate
+./virtual_environment/bin/python3.13 -m pip install pybtex 
+python3 -m pip install setuptools
+
+
