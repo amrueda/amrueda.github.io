@@ -26,7 +26,17 @@ author_profile: true
         {% assign title_shown = true %}
       {% endunless %}
       {% assign pub_counter = pub_counter | plus: 1 %}
-      <p>[{{ pub_counter }}]</p>
+      <div style="display: flex; align-items: flex-start; margin-bottom: 1em;">
+        
+        <div style="width: 50px; font-weight: bold;">
+          [{{ pub_counter }}]
+        </div>
+
+        <div style="flex: 1;">
+          {% include archive-single.html %}
+        </div>
+
+      </div>
       {% include archive-single.html %}
     {% endfor %}
   {% endfor %}
@@ -34,7 +44,17 @@ author_profile: true
   {% for post in site.publications reversed %}
     {% assign pub_counter = pub_counter | plus: 1 %}
     <p>[{{ pub_counter }}]</p>
-    {% include archive-single.html %}
+    <div style="display: flex; align-items: flex-start; margin-bottom: 1em;">
+        
+        <div style="width: 50px; font-weight: bold;">
+          [{{ pub_counter }}]
+        </div>
+
+        <div style="flex: 1;">
+          {% include archive-single.html %}
+        </div>
+
+      </div>
   {% endfor %}
 {% endif %}
 
