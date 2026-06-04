@@ -13,7 +13,7 @@ title                    : "Andrés Rueda-Ramírez"
 title_separator          : "-"
 name                     : &name "Andrés Rueda-Ramírez"
 description              : &description "personal description"
-url                      : https://andres.rueda-ramirez.com # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
+url                      : https://amrueda.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "amrueda/amrueda.github.io"
 
